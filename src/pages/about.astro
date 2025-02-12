@@ -1,5 +1,9 @@
 ---
-import './styles/global.css';
+import '../styles/global.css';
+import Footing from '../components/footing.astro';
+import Header from "../components/header.astro";
+import Hamburger from "../components/hamburger.astro";
+
 
 const pageTitle = "About Me";
 const identity = {
@@ -43,9 +47,8 @@ const textCase = "uppercase";
     </style>
 	</head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">blog</a>
+      <Hamburger />
+      <Header /> 
 
         <h1>{pageTitle}</h1>
         <h2>... and my new Astro site!</h2>
@@ -71,6 +74,9 @@ const textCase = "uppercase";
         {finished && <p>I finished this tutorial!</p>}
 
         {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
+        <Footing />
+
       </body>
 
       <!--Astro’s templating syntax is similar to JSX syntax. If you’re ever wondering how to use
